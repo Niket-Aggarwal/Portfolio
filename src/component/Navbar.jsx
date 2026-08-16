@@ -83,11 +83,11 @@ const Navbar = () => {
             className="group cursor-pointer flex items-center gap-2.5 rounded-full p-1 text-left transition-all duration-300 focus-visible:ring-1 focus-visible:ring-white"
           >
             <span
-              className="flex h-8 w-8 items-center justify-center rounded-xl border border-white/20 bg-white/8
+              className="flex h-9 w-9 items-center justify-center rounded-xl border border-white/20 bg-white/8
                 text-xs font-bold tracking-widest text-white transition-all duration-300
                 group-hover:border-white/40 group-hover:bg-white/15"
             >
-              N
+              NA
             </span>
             <span className="text-sm font-semibold tracking-tight text-white transition-opacity duration-300">
               Niket Aggarwal
@@ -132,11 +132,9 @@ const Navbar = () => {
               <FiArrowUpRight size={13} />
             </a>
             <button onClick={() => setMobileOpen(true)} aria-label="Open mobile menu" aria-expanded={mobileOpen}
-              className="flex cursor-pointer h-9 w-9 items-center justify-center rounded-xl border border-white/15
-                bg-white/5 text-white transition-all duration-300
-                hover:bg-white/15 active:scale-95 lg:hidden"
+              className="cursor-pointer p-1 text-white transition-transform duration-200 hover:scale-110 active:scale-95 lg:hidden"
             >
-              <FiMenu size={18} />
+              <FiMenu size={22} />
             </button>
           </div>
         </nav>
@@ -158,18 +156,16 @@ const Navbar = () => {
       >
         <div className="flex items-center justify-between border-b border-white/10 pb-6">
           <div className="flex items-center gap-2">
-            <span className="flex h-7 w-7 items-center justify-center rounded-xl border border-white/20 bg-white/10 text-xs font-bold text-white">
-              N
+            <span className="flex h-8 w-8 items-center justify-center rounded-xl border border-white/20 bg-white/10 text-xs font-bold text-white">
+              NA
             </span>
             <span className="text-sm font-semibold tracking-tight text-white">
               Niket Aggarwal
             </span>
           </div>
           <button onClick={() => setMobileOpen(false)} aria-label="Close mobile menu"
-            className="flex h-8 w-8 cursor-pointer items-center justify-center rounded-xl border border-white/10
-              text-zinc-400 transition-all duration-200
-              hover:bg-white/10 hover:text-white"
-          >
+              className="cursor-pointer p-1 text-white transition-transform duration-200 hover:scale-110 active:scale-95 lg:hidden"
+            >
             <FiX size={18} />
           </button>
         </div>
