@@ -90,7 +90,7 @@ const Navbar = () => {
               N
             </span>
             <span className="text-sm font-semibold tracking-tight text-white transition-opacity duration-300">
-              Niket
+              Niket Aggarwal
             </span>
           </button>
           <div className="hidden items-center gap-1 rounded-full border border-white/5 bg-white/2 p-1 lg:flex">
@@ -126,7 +126,7 @@ const Navbar = () => {
               className="hidden items-center gap-1.5 rounded-full border border-white bg-white px-4 py-1.5
                 text-xs font-semibold text-black shadow-md shadow-white/5 transition-all duration-300
                 hover:-translate-y-0.5 hover:bg-zinc-200 hover:shadow-lg
-                active:translate-y-0 sm:inline-flex"
+                active:translate-y-0 lg:inline-flex"
             >
               <span>Resume</span>
               <FiArrowUpRight size={13} />
