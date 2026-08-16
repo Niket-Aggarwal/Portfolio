@@ -1,11 +1,12 @@
 import React from 'react'
 
-const Project = () => {
-    return (
-        <>
+const Navbar = () => {
 
-        </>
-    )
+  return (
+    <>
+
+    </>
+  )
 }
 
-export default Project
+export default Navbar
