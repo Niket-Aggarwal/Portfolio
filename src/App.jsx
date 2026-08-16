@@ -1,14 +1,16 @@
-import React from 'react'
-import Page from "./page/Page"
+import React from "react";
+import Background from "./component/Background";
+import Navbar from "./component/Navbar";
+import Page from "./page/Page";
 
 function App() {
-
   return (
     <>
-      <h1 className='text-white bg-black'>Starting...</h1>
+      <Background />
+      <Navbar />
       <Page />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
