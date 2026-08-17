@@ -1,4 +1,4 @@
-import React from "react";
+import React from "react"; 
 import { FiArrowDown, FiArrowUpRight, FiGithub, FiLinkedin } from "react-icons/fi";
 
 const SectionTitle = ({ number, title, description }) => {
