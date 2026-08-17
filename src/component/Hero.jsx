@@ -8,7 +8,7 @@ const SectionTitle = ({ number, title, description }) => {
         {number}
       </p>
       <h2 className="text-4xl font-semibold tracking-tight text-white sm:text-5xl lg:text-6xl">
-        {title}
+        {title} 
       </h2>
       <p className="mt-6 max-w-xl text-base leading-8 text-zinc-500 sm:text-lg">
         {description}
