@@ -103,7 +103,7 @@ const Skills = () => {
   const ActiveIcon = activeData.icon;
 
   return (
-    <section id="skills" className="relative z-20 w-full overflow-hidden border-t border-white/5 px-5"
+    <section id="skills" className="relative z-20 w-full overflow-hidden px-5"
     >
       <div className="mx-auto w-full max-w-7xl">
         <motion.div
@@ -116,17 +116,13 @@ const Skills = () => {
           <h2 className="text-4xl font-semibold tracking-tight text-white sm:text-5xl lg:text-6xl">
             Tech Stack & Tools
           </h2>
-          <p className="mt-5 max-w-xl text-sm leading-7 text-zinc-500 sm:text-base sm:leading-8">
-            A collection of technologies and tools I use to turn ideas into modern, scalable and reliable digital experiences
-          </p>
         </motion.div>
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.1 }}
           transition={{ duration: 0.7, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
-          className="overflow-hidden rounded-3xl border border-white/8 bg-white/1.5 backdrop-blur-sm sm:rounded-4xl"
-        >
+          className="overflow-hidden border-0 bg-transparent rounded-none sm:rounded-4xl sm:border sm:border-white/8 sm:bg-white/1.5 sm:backdrop-blur-sm">
           <div className="flex flex-col lg:min-h-107.5 lg:flex-row">
             <div className="border-b border-white/[0.07] bg-white/1.5 p-3 lg:w-72 lg:shrink-0 lg:border-b-0 lg:border-r lg:p-5">
               <div className="grid grid-cols-2 gap-2 sm:grid-cols-3 lg:hidden">
