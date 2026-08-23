@@ -6,16 +6,6 @@ import { FiGlobe, FiLayout, FiServer, FiDatabase, FiTool, FiUploadCloud } from "
 
 const SKILL_CATEGORIES = [
   {
-    id: "languages",
-    title: "Languages",
-    icon: FiGlobe,
-    skills: [
-      { name: "C++", Icon: SiCplusplus, color: "#00599C" },
-      { name: "Python", Icon: SiPython, color: "#3776AB" },
-      { name: "JavaScript", Icon: SiJavascript, color: "#F7DF1E" }
-    ]
-  },
-  {
     id: "frontend",
     title: "Frontend Development",
     icon: FiLayout,
@@ -46,6 +36,16 @@ const SKILL_CATEGORIES = [
     skills: [
       { name: "MongoDB", Icon: SiMongodb, color: "#47A248" },
       { name: "MySQL", Icon: SiMysql, color: "#4479A1" }
+    ]
+  },
+  {
+    id: "languages",
+    title: "Languages",
+    icon: FiGlobe,
+    skills: [
+      { name: "C++", Icon: SiCplusplus, color: "#00599C" },
+      { name: "Python", Icon: SiPython, color: "#3776AB" },
+      { name: "JavaScript", Icon: SiJavascript, color: "#F7DF1E" }
     ]
   },
   {
@@ -98,7 +98,7 @@ const SkillCard = ({ skill, index }) => {
 };
 
 const Skills = () => {
-  const [activeCategory, setActiveCategory] = useState("languages");
+  const [activeCategory, setActiveCategory] = useState("frontend");
   const activeData = SKILL_CATEGORIES.find((category) => category.id === activeCategory) || SKILL_CATEGORIES[0];
   const ActiveIcon = activeData.icon;
 
@@ -121,10 +121,10 @@ const Skills = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.1 }}
           transition={{ duration: 0.7, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
-          className="overflow-hidden rounded-3xl bg-white/1.5 backdrop-blur-sm sm:rounded-4xl"
+          className="overflow-hidden rounded-3xl border-none bg-white/2 backdrop-blur-sm shadow-[0_0_30px_rgba(255,255,255,0.03)] sm:rounded-4xl lg:border lg:border-white/12"
         >
           <div className="flex flex-col lg:min-h-107.5 lg:flex-row">
-            <div className="border-b border-white/[0.07] bg-white/1.5 p-3 lg:w-72 lg:shrink-0 lg:border-b-0 lg:border-r lg:p-5">
+            <div className="border-b border-white/10 bg-white/2 p-3 lg:w-72 lg:shrink-0 lg:border-b-0 lg:border-r lg:border-r-white/10 lg:p-5">
               <div className="grid grid-cols-2 gap-2 sm:grid-cols-3 lg:hidden">
                 {SKILL_CATEGORIES.map((category) => {
                   const CategoryIcon = category.icon;
@@ -201,6 +201,7 @@ const Skills = () => {
                       <SkillCard key={`${activeData.id}-${skill.name}`} skill={skill} index={index} />
                     ))}
                   </div>
+                  <div className="mx-auto mt-10 h-0.5 w-4/5 bg-linear-to-r from-transparent via-white/60 to-transparent shadow-[0_0_12px_rgba(255,255,255,0.4)] lg:hidden" />
                 </motion.div>
               </AnimatePresence>
             </div>
