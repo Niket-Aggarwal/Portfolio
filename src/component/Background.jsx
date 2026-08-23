@@ -33,6 +33,29 @@ const particles = [
   { left: "102%", delay: "-16s", duration: "10s", length: 70, opacity: 0.3 },
 ];
 
+const extraShowerParticles = [
+  { left: "3%", delay: "-3.5s", duration: "7s", length: 110, opacity: 0.4 },
+  { left: "8%", delay: "-1.5s", duration: "6s", length: 90, opacity: 0.35 },
+  { left: "15%", delay: "-9.5s", duration: "9s", length: 85, opacity: 0.35 },
+  { left: "22%", delay: "-5.5s", duration: "7.8s", length: 100, opacity: 0.3 },
+  { left: "25%", delay: "-4.5s", duration: "8.5s", length: 120, opacity: 0.38 },
+  { left: "31%", delay: "-0.5s", duration: "5.5s", length: 70, opacity: 0.4 },
+  { left: "35%", delay: "-11.5s", duration: "10s", length: 95, opacity: 0.3 },
+  { left: "41%", delay: "-7.2s", duration: "8.2s", length: 110, opacity: 0.35 },
+  { left: "45%", delay: "-1.5s", duration: "7.5s", length: 105, opacity: 0.4 },
+  { left: "49%", delay: "-3.8s", duration: "9s", length: 80, opacity: 0.3 },
+  { left: "55%", delay: "-8.5s", duration: "8s", length: 90, opacity: 0.35 },
+  { left: "61%", delay: "-12.0s", duration: "7.2s", length: 95, opacity: 0.4 },
+  { left: "65%", delay: "-13.5s", duration: "11s", length: 115, opacity: 0.3 },
+  { left: "71%", delay: "-2.1s", duration: "6.8s", length: 85, opacity: 0.35 },
+  { left: "75%", delay: "-6.5s", duration: "9.5s", length: 100, opacity: 0.38 },
+  { left: "81%", delay: "-4.8s", duration: "8.4s", length: 110, opacity: 0.3 },
+  { left: "85%", delay: "-15.5s", duration: "8s", length: 80, opacity: 0.35 },
+  { left: "89%", delay: "-1.1s", duration: "5.9s", length: 75, opacity: 0.4 },
+  { left: "95%", delay: "-2.5s", duration: "10.5s", length: 125, opacity: 0.4 },
+  { left: "98%", delay: "-7.6s", duration: "9.2s", length: 90, opacity: 0.3 },
+];
+
 const edgeParticles = [
   { left: "-12%", delay: "-5s", duration: "9s", length: 90, opacity: 0.3 },
   { left: "-10%", delay: "-14s", duration: "12s", length: 70, opacity: 0.25 },
@@ -43,7 +66,7 @@ const edgeParticles = [
   { left: "108%", delay: "-19s", duration: "9s", length: 110, opacity: 0.3 },
 ];
 
-const allParticles = [...particles, ...edgeParticles];
+const allParticles = [...particles, ...edgeParticles, ...extraShowerParticles];
 
 const Background = () => {
   return (
@@ -79,7 +102,7 @@ const Background = () => {
           >
             <span className="absolute inset-0 rounded-full"
               style={{
-                background:"linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.02) 20%, rgba(255,255,255,0.08) 55%, rgba(255,255,255,0.42) 88%, rgba(255,255,255,0.9) 100%)",
+                background: "linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.02) 20%, rgba(255,255,255,0.08) 55%, rgba(255,255,255,0.42) 88%, rgba(255,255,255,0.9) 100%)",
                 filter: "blur(0.5px)",
               }}
             />
@@ -87,7 +110,7 @@ const Background = () => {
               style={{
                 width: "3px",
                 height: "3px",
-                boxShadow:"0 0 5px rgba(255,255,255,0.9), 0 0 12px rgba(255,255,255,0.45)",
+                boxShadow: "0 0 5px rgba(255,255,255,0.9), 0 0 12px rgba(255,255,255,0.45)",
               }}
             />
           </span>
