@@ -30,6 +30,17 @@ const SKILL_CATEGORIES = [
     ]
   },
   {
+    id: "tools",
+    title: "Developer Tools",
+    icon: FiTool,
+    skills: [
+      { name: "Git", Icon: SiGit, color: "#F05032" },
+      { name: "GitHub", Icon: SiGithub, color: "#FFFFFF" },
+      { name: "Postman", Icon: SiPostman, color: "#FF6C37" },
+      { name: "Figma", Icon: SiFigma, color: "#F24E1E" }
+    ]
+  },
+  {
     id: "database",
     title: "Database & Cloud",
     icon: FiDatabase,
@@ -57,18 +68,7 @@ const SKILL_CATEGORIES = [
       { name: "Render", Icon: SiRender, color: "#46E3B7" },
       { name: "SEO", Icon: SiGoogle, color: "#4285F4" }
     ]
-  },
-  {
-    id: "tools",
-    title: "Developer Tools",
-    icon: FiTool,
-    skills: [
-      { name: "Git", Icon: SiGit, color: "#F05032" },
-      { name: "GitHub", Icon: SiGithub, color: "#FFFFFF" },
-      { name: "Postman", Icon: SiPostman, color: "#FF6C37" },
-      { name: "Figma", Icon: SiFigma, color: "#F24E1E" }
-    ]
-  },
+  }
 ];
 
 const SkillCard = ({ skill, index }) => {
