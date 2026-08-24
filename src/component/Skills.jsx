@@ -84,16 +84,11 @@ const SkillCard = ({ skill, index }) => {
       className="group flex flex-col items-center justify-center cursor-pointer"
     >
       <div
-        className="relative flex h-18 w-18 items-center justify-center rounded-[1.25rem] border border-white/10 bg-[#141923]/80 backdrop-blur-md shadow-lg shadow-black/30 transition-all duration-300 group-hover:border-white/30 group-hover:shadow-2xl sm:h-24 sm:w-24"
+        className="relative flex h-18 w-18 items-center justify-center rounded-[1.25rem] border border-white/8 bg-[#171d28] shadow-lg shadow-black/20 transition-all duration-300 group-hover:border-white/20 sm:h-24 sm:w-24"
       >
-        {/* Dynamic color glow on hover */}
-        <div
-          className="absolute inset-1 rounded-2xl opacity-0 blur-xl transition-opacity duration-500 group-hover:opacity-40"
-          style={{ backgroundColor: skill.color }}
-        />
         <Icon className="relative z-10 h-9 w-9 transition-transform duration-300 group-hover:scale-110 sm:h-12 sm:w-12" style={{ color: skill.color }} />
       </div>
-      <p className="mt-2.5 text-center text-[11px] font-medium text-zinc-400 transition-colors duration-300 group-hover:text-white sm:mt-3 sm:text-sm">
+      <p className="mt-2.5 text-center text-[11px] font-medium text-zinc-500 transition-colors duration-300 group-hover:text-zinc-200 sm:mt-3 sm:text-sm">
         {skill.name}
       </p>
     </motion.div>
