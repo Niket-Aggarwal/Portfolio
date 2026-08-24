@@ -74,23 +74,26 @@ const SKILL_CATEGORIES = [
 const SkillCard = ({ skill, index }) => {
   const Icon = skill.Icon;
   return (
-    <motion.div layout
-      initial={{ opacity: 0, scale: 0.8, y: 25 }}
+    <motion.div
+      layout
+      initial={{ opacity: 0, scale: 0.85, y: 20 }}
       animate={{ opacity: 1, scale: 1, y: 0 }}
-      exit={{ opacity: 0, scale: 0.8, y: -15 }}
-      transition={{ duration: 0.35, delay: index * 0.05, ease: [0.16, 1, 0.3, 1] }}
-      whileHover={{ y: -6, scale: 1.04 }}
-      className="group flex flex-col items-center justify-center"
+      exit={{ opacity: 0, scale: 0.85, y: -10 }}
+      transition={{ duration: 0.3, delay: index * 0.04, ease: [0.16, 1, 0.3, 1] }}
+      whileHover={{ y: -6, scale: 1.05 }}
+      className="group flex flex-col items-center justify-center cursor-pointer"
     >
       <div
-        className="relative flex h-18 w-18 items-center justify-center rounded-[1.25rem] border border-white/8 bg-[#171d28] shadow-lg shadow-black/20 transition-all duration-300 group-hover:border-white/20 sm:h-24 sm:w-24"
+        className="relative flex h-18 w-18 items-center justify-center rounded-[1.25rem] border border-white/10 bg-[#141923]/80 backdrop-blur-md shadow-lg shadow-black/30 transition-all duration-300 group-hover:border-white/30 group-hover:shadow-2xl sm:h-24 sm:w-24"
       >
-        <div className="absolute inset-2 rounded-2xl opacity-0 blur-xl transition-opacity duration-300 group-hover:opacity-30"
+        {/* Dynamic color glow on hover */}
+        <div
+          className="absolute inset-1 rounded-2xl opacity-0 blur-xl transition-opacity duration-500 group-hover:opacity-40"
           style={{ backgroundColor: skill.color }}
         />
-        <Icon className="relative z-10 h-9 w-9 sm:h-12 sm:w-12" style={{ color: skill.color }} />
+        <Icon className="relative z-10 h-9 w-9 transition-transform duration-300 group-hover:scale-110 sm:h-12 sm:w-12" style={{ color: skill.color }} />
       </div>
-      <p className="mt-2.5 text-center text-[11px] font-medium text-zinc-500 transition-colors duration-300 group-hover:text-zinc-200 sm:mt-3 sm:text-sm">
+      <p className="mt-2.5 text-center text-[11px] font-medium text-zinc-400 transition-colors duration-300 group-hover:text-white sm:mt-3 sm:text-sm">
         {skill.name}
       </p>
     </motion.div>
@@ -125,19 +128,30 @@ const Skills = () => {
         >
           <div className="flex flex-col lg:min-h-107.5 lg:flex-row">
             <div className="border-b border-white/10 bg-white/2 p-3 lg:w-72 lg:shrink-0 lg:border-b-0 lg:border-r lg:border-r-white/10 lg:p-5">
+              {/* Mobile Category Grid */}
               <div className="grid grid-cols-2 gap-2 sm:grid-cols-3 lg:hidden">
                 {SKILL_CATEGORIES.map((category) => {
                   const CategoryIcon = category.icon;
                   const isActive = activeCategory === category.id;
                   return (
-                    <button key={category.id} type="button" onClick={() => setActiveCategory(category.id)}
-                      className={`relative flex min-h-12 items-center gap-2.5 rounded-xl px-3 py-2.5 text-left transition-all duration-300
-                        ${isActive ? "bg-white/9 text-white" : "bg-white/1.5 text-zinc-500 hover:bg-white/4 hover:text-zinc-300"}
+                    <button
+                      key={category.id}
+                      type="button"
+                      onClick={() => setActiveCategory(category.id)}
+                      onMouseEnter={() => setActiveCategory(category.id)}
+                      onFocus={() => setActiveCategory(category.id)}
+                      className={`relative flex min-h-12 items-center justify-between gap-2 rounded-xl px-3 py-2.5 text-left transition-all duration-300
+                        ${isActive ? "bg-white/10 text-white shadow-sm" : "bg-white/1.5 text-zinc-400 hover:bg-white/6 hover:text-zinc-200"}
                       `}
                     >
-                      <CategoryIcon className={`h-4 w-4 shrink-0 ${isActive ? "text-white" : ""}`} />
-                      <span className="text-[10px] font-medium leading-tight sm:text-xs">
-                        {category.title}
+                      <div className="flex items-center gap-2.5">
+                        <CategoryIcon className={`h-4 w-4 shrink-0 transition-colors ${isActive ? "text-white" : "text-zinc-400"}`} />
+                        <span className="text-[10px] font-medium leading-tight sm:text-xs">
+                          {category.title}
+                        </span>
+                      </div>
+                      <span className={`text-[10px] font-semibold px-1.5 py-0.5 rounded-full ${isActive ? "bg-white/20 text-white" : "bg-white/5 text-zinc-500"}`}>
+                        {category.skills.length}
                       </span>
                       {isActive && (
                         <motion.div
@@ -150,20 +164,30 @@ const Skills = () => {
                   );
                 })}
               </div>
+              {/* Desktop Category Navigation */}
               <div className="hidden lg:flex lg:flex-col lg:gap-2">
                 {SKILL_CATEGORIES.map((category) => {
                   const CategoryIcon = category.icon;
                   const isActive = activeCategory === category.id;
                   return (
-                    <button key={category.id} type="button"
+                    <button
+                      key={category.id}
+                      type="button"
                       onClick={() => setActiveCategory(category.id)}
-                      className={`cursor-pointer group relative flex w-full items-center gap-3 rounded-xl px-4 py-3 text-left transition-all duration-300
-                        ${isActive ? "bg-white/9 text-white" : "text-zinc-500 hover:bg-white/4 hover:text-zinc-300"}
+                      onMouseEnter={() => setActiveCategory(category.id)}
+                      onFocus={() => setActiveCategory(category.id)}
+                      className={`cursor-pointer group relative flex w-full items-center justify-between rounded-xl px-4 py-3 text-left transition-all duration-300
+                        ${isActive ? "bg-white/10 text-white font-medium shadow-sm" : "text-zinc-400 hover:bg-white/5 hover:text-zinc-200"}
                       `}
                     >
-                      <CategoryIcon className={`h-4 w-4 shrink-0 transition-transform duration-300 ${isActive ? "scale-110" : ""}`} />
-                      <span className="text-sm font-medium">
-                        {category.title}
+                      <div className="flex items-center gap-3">
+                        <CategoryIcon className={`h-4 w-4 shrink-0 transition-transform duration-300 ${isActive ? "scale-110 text-white" : "text-zinc-400 group-hover:text-zinc-200"}`} />
+                        <span className="text-sm">
+                          {category.title}
+                        </span>
+                      </div>
+                      <span className={`text-xs font-semibold px-2 py-0.5 rounded-full transition-colors ${isActive ? "bg-white/20 text-white" : "bg-white/5 text-zinc-500 group-hover:bg-white/10 group-hover:text-zinc-300"}`}>
+                        {category.skills.length}
                       </span>
                       {isActive && (
                         <motion.div
@@ -177,6 +201,7 @@ const Skills = () => {
                 })}
               </div>
             </div>
+            {/* Skill Cards Display Area */}
             <div className="flex min-h-75 flex-1 flex-col justify-center p-5 sm:min-h-82.5 sm:p-10 lg:p-12">
               <AnimatePresence mode="wait">
                 <motion.div
@@ -186,15 +211,20 @@ const Skills = () => {
                   exit={{ opacity: 0, x: -15 }}
                   transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
                 >
-                  <div className="mb-7 flex items-center gap-3 sm:mb-8">
-                    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-white/10 bg-white/4">
-                      <ActiveIcon className="h-5 w-5 text-zinc-300" />
+                  <div className="mb-7 flex items-center justify-between sm:mb-8">
+                    <div className="flex items-center gap-3">
+                      <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-white/10 bg-white/4 shadow-inner">
+                        <ActiveIcon className="h-5 w-5 text-white" />
+                      </div>
+                      <div>
+                        <p className="text-base font-semibold tracking-tight text-white sm:text-xl">
+                          {activeData.title}
+                        </p>
+                      </div>
                     </div>
-                    <div>
-                      <p className="text-base font-semibold tracking-tight text-white sm:text-xl">
-                        {activeData.title}
-                      </p>
-                    </div>
+                    <span className="hidden sm:inline-block text-xs font-medium text-zinc-500 border border-white/10 px-3 py-1 rounded-full bg-white/2">
+                      {activeData.skills.length} skills listed
+                    </span>
                   </div>
                   <div className="grid grid-cols-3 gap-x-4 gap-y-7 min-[420px]:grid-cols-4 sm:gap-x-8 sm:gap-y-9 md:grid-cols-5">
                     {activeData.skills.map((skill, index) => (
