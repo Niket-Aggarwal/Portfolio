@@ -70,7 +70,7 @@ button {
   }
 
   6% {
-    opacity: 0.25;
+    opacity: 0.35;
   }
 
   18% {
@@ -78,15 +78,15 @@ button {
   }
 
   50% {
-    opacity: 0.85;
+    opacity: 0.9;
   }
 
   75% {
-    opacity: 0.45;
+    opacity: 0.5;
   }
 
   100% {
-    transform: translate3d(420px, 125vh, 0) rotate(35deg);
+    transform: translate3d(450px, 130vh, 0) rotate(35deg);
     opacity: 0;
   }
 }
@@ -96,6 +96,9 @@ button {
   animation-timing-function: linear;
   animation-iteration-count: infinite;
   will-change: transform, opacity;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  transform-style: preserve-3d;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -103,4 +106,4 @@ button {
     animation: none !important;
     opacity: 0.15 !important;
   }
-}
+}

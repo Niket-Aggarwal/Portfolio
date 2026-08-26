@@ -63,9 +63,12 @@ const Hero = () => {
             transition={{ duration: 0.8, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
             className="flex flex-col justify-center lg:col-span-7"
           >
-            <div className="mb-4 hidden w-fit items-center gap-2.5 rounded-full border border-white/10 bg-white/3 px-4 py-2 sm:mb-6 sm:inline-flex">
-              <span className="h-2 w-2 rounded-full bg-white/60" />
-              <span className="text-xs font-medium uppercase tracking-widest text-zinc-400">
+            <div className="mb-6 flex w-fit items-center gap-2.5 rounded-full border border-white/10 bg-white/5 px-4 py-2 shadow-sm backdrop-blur-md">
+              <span className="relative flex h-2 w-2 items-center justify-center">
+                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-white/40 opacity-75" />
+                <span className="relative inline-flex h-2 w-2 rounded-full bg-gradient-to-r from-white via-zinc-400 to-white shadow-[0_0_8px_rgba(255,255,255,0.8)]" />
+              </span>
+              <span className="text-xs font-medium uppercase tracking-widest text-zinc-300">
                 Full Stack Developer
               </span>
             </div>

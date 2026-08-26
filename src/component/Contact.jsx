@@ -11,7 +11,7 @@ const Contact = () => {
   return (
     <section
       id="contact"
-      className="flex min-h-screen items-center border-t border-white/5 px-6 py-32 sm:px-10 lg:px-16"
+      className="relative z-10 w-full overflow-hidden bg-transparent px-5 py-16 sm:px-10 sm:py-24 lg:px-16"
     >
       <div className="mx-auto w-full max-w-7xl">
         <div className="max-w-3xl">

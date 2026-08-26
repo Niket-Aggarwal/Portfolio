@@ -108,11 +108,14 @@ const Skills = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-          className="mb-8 sm:mb-12"
+          className="mx-auto max-w-2xl text-center mb-8 sm:mb-12"
         >
-          <h2 className="text-4xl font-semibold tracking-tight text-white sm:text-5xl lg:text-6xl">
+          <h2 className="text-3xl font-semibold tracking-tight text-white sm:text-5xl lg:text-6xl">
             Tech Stack & Tools
           </h2>
+          <p className="mt-4 text-sm leading-relaxed text-zinc-400 sm:mt-6 sm:text-base sm:leading-8">
+            Technologies, frameworks and developer tools I work with to build modern, scalable web applications
+          </p>
         </motion.div>
         <motion.div
           initial={{ opacity: 0, y: 40 }}
@@ -226,7 +229,6 @@ const Skills = () => {
                       <SkillCard key={`${activeData.id}-${skill.name}`} skill={skill} index={index} />
                     ))}
                   </div>
-                  <div className="mx-auto mt-10 h-0.5 w-4/5 bg-linear-to-r from-transparent via-white/60 to-transparent shadow-[0_0_12px_rgba(255,255,255,0.4)] lg:hidden" />
                 </motion.div>
               </AnimatePresence>
             </div>
