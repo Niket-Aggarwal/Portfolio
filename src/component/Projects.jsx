@@ -10,7 +10,6 @@ const PROJECTS = [
   {
     id: 1,
     title: "NexLink",
-    category: "Digital Identity Platform",
     description:
       "A digital identity platform that brings all your important links together in one place. Create a personalized public NexLink profile and share a single URL as your digital visiting card",
     technologies: ["React", "Node.js", "Express.js", "MongoDB"],
@@ -22,7 +21,6 @@ const PROJECTS = [
   {
     id: 2,
     title: "Management Interaction Cell",
-    category: "Organization Website",
     description:
       "A modern and responsive website developed for the Management Interaction Cell, showcasing the organization's activities, initiatives and information",
     technologies: ["React", "Tailwind CSS"],
@@ -33,7 +31,6 @@ const PROJECTS = [
   {
     id: 3,
     title: "MIC Waiver System",
-    category: "Full Stack Application",
     description:
       "A full stack management system built to streamline and organize internal processes for the Management Interaction Cell, with a modern and scalable MERN-based architecture",
     technologies: ["MongoDB", "Express.js", "React", "Node.js"],
@@ -44,7 +41,6 @@ const PROJECTS = [
   {
     id: 4,
     title: "TEDxSSCBS Website",
-    category: "Web Development",
     description:
       "A responsive event website developed for TEDx, providing visitors with essential event information, updates and details in a clean and accessible interface",
     technologies: ["React", "CSS"],
@@ -83,10 +79,14 @@ const ProjectCard = ({ project, index }) => {
       className={`flex flex-col justify-between overflow-hidden border border-transparent bg-transparent p-5 sm:p-7 ${radiusStyle}`}
     >
       <div>
-        <div className="flex items-center justify-between gap-2">
-          <span className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-[10px] font-medium tracking-wide text-zinc-300 backdrop-blur-md">
-            {project.category}
-          </span>
+        <div className="relative mt-4 aspect-video w-full overflow-hidden rounded-xl border border-white/10 bg-zinc-950">
+          <img src={project.image} alt={project.title} loading="lazy" className="h-full w-full object-cover object-top"
+          />
+        </div>
+        <div className="mt-4 flex items-center justify-between gap-2">
+          <h3 className="text-xl font-semibold text-white sm:text-2xl">
+            {project.title}
+          </h3>
           <div className="flex items-center gap-3">
             {project.githubUrl && project.githubUrl !== "#" && (
               <a href={project.githubUrl} target="_blank" rel="noopener noreferrer" aria-label={`View ${project.title} source code`}
@@ -104,9 +104,6 @@ const ProjectCard = ({ project, index }) => {
             )}
           </div>
         </div>
-        <h3 className="mt-4 text-xl font-semibold text-white sm:text-2xl">
-          {project.title}
-        </h3>
         <p className="mt-2.5 text-xs leading-relaxed text-zinc-400 sm:text-sm sm:leading-6">
           {project.description}
         </p>
@@ -119,10 +116,6 @@ const ProjectCard = ({ project, index }) => {
             </span>
           ))}
         </div>
-      </div>
-      <div className="relative mt-6 aspect-video w-full overflow-hidden rounded-xl border border-white/10 bg-zinc-950">
-        <img src={project.image} alt={project.title} loading="lazy" className="h-full w-full object-cover object-top"
-        />
       </div>
     </motion.article>
   );
