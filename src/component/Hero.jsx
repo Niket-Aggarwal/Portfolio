@@ -3,12 +3,9 @@ import { motion } from "motion/react";
 import { FiArrowUpRight } from "react-icons/fi";
 import UserImage from "../assets/image.png";
 
-const SectionTitle = ({ number, title, description }) => {
+const SectionTitle = ({title, description }) => {
   return (
     <div className="max-w-2xl">
-      <p className="mb-4 text-xs font-medium uppercase tracking-[0.35em] text-zinc-600">
-        {number}
-      </p>
       <h2 className="text-4xl font-semibold tracking-tight text-white sm:text-5xl lg:text-6xl">
         {title}
       </h2>
@@ -66,7 +63,7 @@ const Hero = () => {
             <div className="mb-6 hidden lg:flex w-fit items-center gap-2.5 rounded-full border border-white/10 bg-white/5 px-4 py-2 shadow-sm backdrop-blur-md">
               <span className="relative flex h-2 w-2 items-center justify-center">
                 <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-white/40 opacity-75" />
-                <span className="relative inline-flex h-2 w-2 rounded-full bg-gradient-to-r from-white via-zinc-400 to-white shadow-[0_0_8px_rgba(255,255,255,0.8)]" />
+                <span className="relative inline-flex h-2 w-2 rounded-full bg-linear-to-r from-white via-zinc-400 to-white shadow-[0_0_8px_rgba(255,255,255,0.8)]" />
               </span>
               <span className="text-xs font-medium uppercase tracking-widest text-zinc-300">
                 Full Stack Developer

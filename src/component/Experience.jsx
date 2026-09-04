@@ -28,7 +28,7 @@ const EXPERIENCE_DATA = [
     role: "Society Member & Event Contributor",
     category: "Community",
     description:
-      "contributing as an active member of a college society by supporting the organization of student hackathons, campus events and TEDx sessions. Collaborating with teams to manage event activities and engage with the student community",
+      "contributing as an active member of a college society by supporting the organization of student hackathons, campus events and TEDxSSCBS. Collaborating with teams to manage event activities and engage with the student community",
     highlights: ["Event Coordination", "Team Collaboration", "Community Engagement"],
     side: "left",
   },
@@ -44,7 +44,7 @@ const EXPERIENCE_DATA = [
   },
 ];
 
-const SectionTitle = ({ number, title, description }) => {
+const SectionTitle = ({ title, description }) => {
   return (
     <div className="mx-auto max-w-2xl text-center">
       <h2 className="text-3xl font-semibold tracking-tight text-white sm:text-5xl lg:text-6xl">
@@ -69,11 +69,10 @@ const ExperienceCard = ({ experience }) => {
       className={`relative w-full pl-10 md:w-[calc(50%-2.5rem)] md:pl-0 ${isRight ? "md:ml-auto" : "md:mr-auto"
         }`}
     >
-      <div className="absolute left-1.5 top-6 h-3 w-3 -translate-x-1/2 rounded-full border border-white/60 bg-zinc-950 shadow-[0_0_10px_rgba(255,255,255,0.4)] md:hidden" />
       <motion.div
         whileHover={{ y: -6 }}
         transition={{ duration: 0.3, ease: "easeOut" }}
-        className="group relative rounded-2xl border border-transparent bg-transparent p-5 transition-all duration-500 hover:border-white/15 hover:bg-white/[0.03] hover:shadow-2xl sm:p-7"
+        className="group relative rounded-2xl border border-transparent bg-transparent p-5 transition-all duration-500 hover:border-white/15 hover:bg-white/3 hover:shadow-2xl sm:p-7"
       >
         <div className="flex items-center justify-between gap-2">
           <span className="font-mono text-xs font-semibold tracking-wider text-zinc-400">
@@ -132,11 +131,11 @@ const Experience = () => {
           <div className="absolute bottom-12 left-1.5 top-0 w-px bg-white/10 md:left-1/2 md:-translate-x-1/2" />
           <motion.div
             style={{ scaleY: lineScale, transformOrigin: "top" }}
-            className="absolute bottom-12 left-1.5 top-0 w-px bg-gradient-to-b from-white via-white/80 to-white/20 will-change-transform md:left-1/2 md:-translate-x-1/2"
+            className="absolute bottom-12 left-1.5 top-0 w-px bg-linear-to-b from-white via-white/80 to-white/20 will-change-transform md:left-1/2 md:-translate-x-1/2"
           />
           <motion.div
             style={{ top: circleY, x: "-50%" }}
-            className="hidden md:block absolute left-1/2 z-20 h-4 w-4 rounded-full border-2 border-white bg-zinc-950 shadow-[0_0_15px_rgba(255,255,255,0.6)] will-change-transform"
+            className="absolute left-1.5 md:left-1/2 z-20 h-4 w-4 rounded-full border-2 border-white bg-zinc-950 shadow-[0_0_15px_rgba(255,255,255,0.6)] will-change-transform"
           />
           <div className="relative space-y-8 sm:space-y-12">
             {EXPERIENCE_DATA.map((experience) => (

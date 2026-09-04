@@ -26,6 +26,15 @@ body {
   color: #f5f5f5;
 }
 
+img {
+  content-visibility: auto;
+}
+
+.will-change-transform {
+  will-change: transform;
+  transform: translateZ(0);
+}
+
 button {
   font: inherit;
 }
@@ -106,4 +115,4 @@ button {
     animation: none !important;
     opacity: 0.15 !important;
   }
-}
+}

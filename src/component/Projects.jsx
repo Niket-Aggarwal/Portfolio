@@ -5,10 +5,21 @@ import Ted from "../assets/project/tedxsscbs.png";
 import Mic from "../assets/project/mic.png";
 import Waiver from "../assets/project/waiver.png";
 import Nexlink from "../assets/project/nexlink.png";
+import apiawake from "../assets/project/pluseops.png";
 
 const PROJECTS = [
   {
-    id: 1,
+    id: 5,
+    title: "PulseOps",
+    description:
+      "An API monitoring platform that keeps deployed APIs active and continuously monitors their uptime, response time and health. Get monitoring history, failure alerts and a public status page to stay informed about your APIs",
+    technologies: ["React", "Node.js", "Express.js", "MongoDB", "Node-Cron"],
+    image: apiawake,
+    liveUrl: null,
+    githubUrl: "https://github.com/Niket-Aggarwal/PluseOps",
+  },
+  {
+    id: 4,
     title: "NexLink",
     description:
       "A digital identity platform that brings all your important links together in one place. Create a personalized public NexLink profile and share a single URL as your digital visiting card",
@@ -19,7 +30,7 @@ const PROJECTS = [
     featured: true,
   },
   {
-    id: 2,
+    id: 3,
     title: "Management Interaction Cell",
     description:
       "A modern and responsive website developed for the Management Interaction Cell, showcasing the organization's activities, initiatives and information",
@@ -29,7 +40,7 @@ const PROJECTS = [
     githubUrl: null,
   },
   {
-    id: 3,
+    id: 2,
     title: "MIC Waiver System",
     description:
       "A full stack management system built to streamline and organize internal processes for the Management Interaction Cell, with a modern and scalable MERN-based architecture",
@@ -39,7 +50,7 @@ const PROJECTS = [
     githubUrl: null,
   },
   {
-    id: 4,
+    id: 1,
     title: "TEDxSSCBS Website",
     description:
       "A responsive event website developed for TEDx, providing visitors with essential event information, updates and details in a clean and accessible interface",
@@ -50,12 +61,9 @@ const PROJECTS = [
   },
 ];
 
-const SectionTitle = ({ number, title, description }) => {
+const SectionTitle = ({ title, description }) => {
   return (
     <div className="mx-auto max-w-2xl text-center">
-      <p className="mb-4 text-xs font-mono font-semibold uppercase tracking-[0.35em] text-zinc-500">
-        {number}
-      </p>
       <h2 className="text-3xl font-semibold tracking-tight text-white sm:text-5xl lg:text-6xl">
         {title}
       </h2>
@@ -110,7 +118,7 @@ const ProjectCard = ({ project, index }) => {
         <div className="mt-4 flex flex-wrap gap-2">
           {project.technologies.map((technology) => (
             <span key={technology}
-              className="rounded-md border border-white/[0.08] bg-white/[0.03] px-2.5 py-1 text-[10px] font-medium text-zinc-400 sm:text-xs"
+              className="rounded-md border border-white/8 bg-white/3 px-2.5 py-1 text-[10px] font-medium text-zinc-400 sm:text-xs"
             >
               {technology}
             </span>
@@ -129,7 +137,7 @@ const Projects = () => {
     >
       <div className="mx-auto w-full max-w-7xl">
         <SectionTitle
-          title="Things I've built."
+          title="Things I've built"
           description="A selection of web applications and software projects I've designed and developed"
         />
         <div className="mt-14 grid gap-6 sm:mt-20 md:grid-cols-2">

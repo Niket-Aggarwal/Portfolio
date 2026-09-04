@@ -1,0 +1,12 @@
+# Robots.txt for Niket Aggarwal Portfolio
+# https://www.niket.live
+
+User-agent: *
+Allow: /
+
+# Canonical Host
+Host: https://www.niket.live
+
+# Sitemap Locations
+Sitemap: https://www.niket.live/sitemap.xml
+Sitemap: https://www.niket.live/sitemap.txt
