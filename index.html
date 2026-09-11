@@ -4,61 +4,218 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Niket Aggarwal | Full Stack Developer</title>
+
+  <!-- Primary Meta Tags -->
+  <title>Niket Aggarwal — Full Stack Developer | React, Node.js & MERN Stack Portfolio</title>
   <meta name="description"
-    content="Niket Aggarwal is a Full Stack Developer specializing in React, Node.js, Express.js, MongoDB, and modern, performant web applications with SEO" />
+    content="Niket Aggarwal is a Full Stack Developer specializing in React, Node.js, Express.js, and MongoDB. Explore projects, skills, and experience in modern web development" />
   <meta name="author" content="Niket Aggarwal" />
   <meta name="keywords"
-    content="Niket Aggarwal, MERN Stack Developer, Full Stack Developer, React Developer, Node.js Developer, Web Developer, Portfolio, Software Engineer" />
+    content="Niket Aggarwal, Niket Aggarwal developer, Niket Aggarwal portfolio, MERN Stack Developer, Full Stack Developer, React Developer, Node.js Developer, Web Developer, Portfolio, Software Engineer, niket.live" />
+
+  <!-- Robots — Static tag (always visible to crawlers, no JS needed) -->
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+
+  <!-- Canonical URL — Tells Google this is the ONE true URL -->
+  <link rel="canonical" href="https://www.niket.live/" />
+
+  <!-- Favicons -->
   <link rel="icon" type="image/x-icon" href="/favicon.ico" />
   <link rel="icon" type="image/png" sizes="512x512" href="/favicon.png" />
   <link rel="apple-touch-icon" href="/favicon.png" />
-  <link rel="canonical" href="https://www.niket.live/" />
-  <script>
-    (function () {
-      var hostname = window.location.hostname;
-      var meta = document.createElement('meta');
-      meta.name = 'robots';
-      if (hostname.indexOf('vercel.app') !== -1) {
-        meta.content = 'noindex, nofollow';
-      } else {
-        meta.content = 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1';
-      }
-      document.head.appendChild(meta);
-    })();
-  </script>
+
+  <!-- Theme & App Identity -->
+  <meta name="theme-color" content="#020202" />
+  <meta name="application-name" content="Niket Aggarwal Portfolio" />
+  <meta name="color-scheme" content="dark" />
+
+  <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Niket Aggarwal | Full Stack Developer" />
+  <meta property="og:title" content="Niket Aggarwal — Full Stack Developer | React & MERN Stack Portfolio" />
   <meta property="og:description"
-    content="Niket Aggarwal, a Full Stack Developer building modern, scalable, and thoughtful web applications with SEO" />
+    content="Explore the portfolio of Niket Aggarwal — a Full Stack Developer building modern, scalable web applications with React, Node.js, Express.js, and MongoDB." />
   <meta property="og:url" content="https://www.niket.live/" />
   <meta property="og:site_name" content="Niket Aggarwal Portfolio" />
   <meta property="og:image" content="https://www.niket.live/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Niket Aggarwal — Full Stack Developer Portfolio" />
+  <meta property="og:locale" content="en_US" />
+
+  <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Niket Aggarwal | Full Stack Developer" />
+  <meta name="twitter:title" content="Niket Aggarwal — Full Stack Developer | React & MERN Stack Portfolio" />
   <meta name="twitter:description"
-    content="Niket Aggarwal, a Full Stack Developer building modern, scalable, and thoughtful web applications with SEO" />
+    content="Explore the portfolio of Niket Aggarwal — a Full Stack Developer building modern, scalable web applications with React, Node.js, Express.js, and MongoDB." />
   <meta name="twitter:image" content="https://www.niket.live/og-image.png" />
+  <meta name="twitter:image:alt" content="Niket Aggarwal — Full Stack Developer Portfolio" />
+
+  <!-- Structured Data: Person -->
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "Person",
+      "@id": "https://www.niket.live/#person",
       "name": "Niket Aggarwal",
+      "givenName": "Niket",
+      "familyName": "Aggarwal",
       "url": "https://www.niket.live/",
+      "image": "https://www.niket.live/og-image.png",
+      "description": "Full Stack Developer specializing in React, Node.js, Express.js, MongoDB, and modern web applications.",
       "jobTitle": "Full Stack Developer",
+      "knowsAbout": [
+        "React", "Node.js", "Express.js", "MongoDB", "JavaScript", "Python",
+        "Full Stack Development", "MERN Stack", "Tailwind CSS", "REST APIs",
+        "Django", "FastAPI", "Git", "C++", "Web Development"
+      ],
+      "knowsLanguage": ["English", "Hindi"],
+      "alumniOf": {
+        "@type": "CollegeOrUniversity",
+        "name": "Shaheed Sukhdev College of Business Studies",
+        "sameAs": "https://www.sscbsdu.ac.in/"
+      },
       "sameAs": [
         "https://github.com/Niket-Aggarwal",
         "https://www.linkedin.com/in/niket-aggarwal-developer/",
         "https://www.instagram.com/buddy.cyber/"
       ],
-      "knowsAbout": ["React", "Node.js", "Express.js", "MongoDB", "JavaScript", "Full Stack Development"]
+      "mainEntityOfPage": {
+        "@type": "ProfilePage",
+        "@id": "https://www.niket.live/"
+      }
     }
   </script>
+
+  <!-- Structured Data: WebSite -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "@id": "https://www.niket.live/#website",
+      "name": "Niket Aggarwal Portfolio",
+      "url": "https://www.niket.live/",
+      "description": "Portfolio website of Niket Aggarwal, a Full Stack Developer specializing in React, Node.js, and MERN Stack.",
+      "publisher": {
+        "@id": "https://www.niket.live/#person"
+      },
+      "inLanguage": "en-US"
+    }
+  </script>
+
+  <!-- Structured Data: BreadcrumbList -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.niket.live/"
+        }
+      ]
+    }
+  </script>
+
   <link rel="stylesheet" href="./src/index.css" />
 </head>
 
 <body>
   <div id="root"></div>
+
+  <!-- Noscript: Crawlable fallback content for search engines and non-JS environments -->
+  <noscript>
+    <header>
+      <h1>Niket Aggarwal — Full Stack Developer</h1>
+      <p>Building digital experiences that matter</p>
+    </header>
+    <main>
+      <section>
+        <h2>About</h2>
+        <p>
+          I'm Niket Aggarwal, a Full Stack Developer focused on building modern, scalable and thoughtful web
+          applications.
+          I turn complex problems into elegant, performant digital interfaces. Specializing in React, Node.js,
+          Express.js, MongoDB, and the MERN Stack.
+        </p>
+      </section>
+
+      <section>
+        <h2>Skills &amp; Technologies</h2>
+        <p>
+          <strong>Frontend:</strong> React, Vite, Tailwind CSS, HTML5, CSS<br />
+          <strong>Backend:</strong> Node.js, Express.js, Django, FastAPI, Python<br />
+          <strong>Database:</strong> MongoDB, MySQL<br />
+          <strong>Languages:</strong> JavaScript, Python, C++<br />
+          <strong>Tools:</strong> Git, GitHub, Postman, Figma, Vercel, Render
+        </p>
+      </section>
+
+      <section>
+        <h2>Experience</h2>
+        <article>
+          <h3>Freelance Developer (2025 — Present)</h3>
+          <p>Building web applications using React, Node.js, Express, and MongoDB. Focused on clean architecture,
+            responsive designs, and scalable backend services.</p>
+        </article>
+        <article>
+          <h3>Society Member &amp; Event Contributor (2025 — Present)</h3>
+          <p>Contributing as an active member of a college society by supporting the organization of student hackathons,
+            campus events and TEDxSSCBS.</p>
+        </article>
+        <article>
+          <h3>Bachelor of Science (Honours) in Computer Science (2025 — Present)</h3>
+          <p>Currently pursuing B.Sc. (Hons) Computer Science, building strong foundation in programming, algorithms,
+            and software development.</p>
+        </article>
+      </section>
+
+      <section>
+        <h2>Projects</h2>
+        <article>
+          <h3>PulseOps</h3>
+          <p>An API monitoring platform that keeps deployed APIs active and continuously monitors their uptime, response
+            time and health.</p>
+        </article>
+        <article>
+          <h3>NexLink</h3>
+          <p>A digital identity platform that brings all your important links together in one place. Create a
+            personalized public profile and share a single URL.</p>
+        </article>
+        <article>
+          <h3>Management Interaction Cell</h3>
+          <p>A modern and responsive website developed for the Management Interaction Cell, showcasing the
+            organization's activities and initiatives.</p>
+        </article>
+        <article>
+          <h3>MIC Waiver System</h3>
+          <p>A full stack management system built to streamline and organize internal processes with a modern MERN-based
+            architecture.</p>
+        </article>
+        <article>
+          <h3>TEDxSSCBS Website</h3>
+          <p>A responsive event website developed for TEDx, providing visitors with essential event information, updates
+            and details.</p>
+        </article>
+      </section>
+
+      <section>
+        <h2>Contact</h2>
+        <p>Feel free to reach out for collaborations, project inquiries or just to say hello.</p>
+        <ul>
+          <li><a href="https://www.linkedin.com/in/niket-aggarwal-developer/">LinkedIn</a></li>
+          <li><a href="https://github.com/Niket-Aggarwal">GitHub</a></li>
+          <li><a href="https://www.instagram.com/buddy.cyber/">Instagram</a></li>
+          <li><a href="mailto:21.xiia.niketaggarwal@gmail.com">Email</a></li>
+        </ul>
+      </section>
+    </main>
+    <footer>
+      <p>&copy; 2026 Niket Aggarwal. All rights reserved. <a href="https://www.niket.live/">niket.live</a></p>
+    </footer>
+  </noscript>
+
   <script type="module" src="/src/main.jsx"></script>
 </body>
 

@@ -3,7 +3,7 @@ import { motion } from "motion/react";
 import { FiArrowUpRight } from "react-icons/fi";
 import UserImage from "../assets/image.png";
 
-const SectionTitle = ({title, description }) => {
+const SectionTitle = ({ title, description }) => {
   return (
     <div className="max-w-2xl">
       <h2 className="text-4xl font-semibold tracking-tight text-white sm:text-5xl lg:text-6xl">
@@ -80,7 +80,7 @@ const Hero = () => {
             <p className="mt-4 max-w-xl text-sm leading-6 text-zinc-500 sm:mt-6 sm:text-base sm:leading-8 lg:text-lg">
               I'm Niket Aggarwal, a Full Stack Developer focused on building
               modern, scalable and thoughtful web applications. I turn complex
-              problems into elegant, performant digital interfaces with SEO
+              problems into elegant, performant digital interfaces
             </p>
             <div className="mt-6 flex flex-wrap gap-4 sm:mt-8">
               <button onClick={() => scrollTo("projects")}

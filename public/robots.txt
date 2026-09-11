@@ -3,6 +3,9 @@
 
 User-agent: *
 Allow: /
+Disallow: /assets/
+Disallow: /*.js$
+Disallow: /*.css$
 
 # Canonical Host
 Host: https://www.niket.live

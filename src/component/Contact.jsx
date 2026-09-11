@@ -124,6 +124,7 @@ const Contact = () => {
   };
 
   return (
+    <footer role="contentinfo">
     <section id="contact"
       className="relative z-10 w-full overflow-hidden bg-transparent px-5 py-16 sm:py-24 pb-24 sm:pb-32 lg:pb-36"
     >
@@ -359,6 +360,7 @@ const Contact = () => {
         </div>
       </div>
     </section>
+    </footer>
   );
 };
 
