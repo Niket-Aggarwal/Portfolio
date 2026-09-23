@@ -6,10 +6,11 @@ import Mic from "../assets/project/mic.png";
 import Waiver from "../assets/project/waiver.png";
 import Nexlink from "../assets/project/nexlink.png";
 import apiawake from "../assets/project/pluseops.png";
+import CineVault from "../assets/project/cinevault.png";
 
 const PROJECTS = [
   {
-    id: 5,
+    id: 6,
     title: "PulseOps",
     description:
       "An API monitoring platform that keeps deployed APIs active and continuously monitors their uptime, response time and health. Get monitoring history, failure alerts and a public status page to stay informed about your APIs",
@@ -19,7 +20,7 @@ const PROJECTS = [
     githubUrl: "https://github.com/Niket-Aggarwal/PluseOps",
   },
   {
-    id: 4,
+    id: 5,
     title: "NexLink",
     description:
       "A digital identity platform that brings all your important links together in one place. Create a personalized public NexLink profile and share a single URL as your digital visiting card",
@@ -28,6 +29,16 @@ const PROJECTS = [
     liveUrl: "https://www.mynexlink.niket.live",
     githubUrl: "https://github.com/Niket-Aggarwal/Digital-Visiting-Card",
     featured: true,
+  },
+  {
+    "id": 4,
+    "title": "CineVault",
+    "description": "A movie discovery and watchlist platform powered by the IMDb API. Search for movies, explore movie details and create a personalized watchlist of films you want to watch",
+    "technologies": ["React", "Node.js", "Express.js", "IMDb API"],
+    "image": CineVault,
+    "liveUrl": "https://cinevault-by-imdb.vercel.app/",
+    "githubUrl": null,
+    "featured": true
   },
   {
     id: 3,
