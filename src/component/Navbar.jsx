@@ -11,6 +11,7 @@ const Navbar = () => {
     { name: "Home", id: "home" },
     { name: "Skills", id: "skills" },
     { name: "Experience", id: "experience" },
+    // { name: "Achievements", id: "achievements" },
     { name: "Projects", id: "projects" },
     { name: "Contact", id: "contact" },
   ];

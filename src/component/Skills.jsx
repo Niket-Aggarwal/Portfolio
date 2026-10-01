@@ -2,7 +2,27 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { SiCplusplus, SiPython, SiJavascript, SiReact, SiVite, SiTailwindcss, SiHtml5, SiCss, SiNodedotjs, SiExpress, SiDjango } from "react-icons/si";
 import { SiMongodb, SiMysql, SiGit, SiGithub, SiPostman, SiFigma, SiVercel, SiRender, SiGoogle, SiFastapi } from "react-icons/si";
+import { SiClaude, SiGithubcopilot, SiGooglegemini } from "react-icons/si";
+import { RiOpenaiFill, RiSparklingFill } from "react-icons/ri";
 import { FiGlobe, FiLayout, FiServer, FiDatabase, FiTool, FiUploadCloud } from "react-icons/fi";
+
+const AntigravityIcon = ({ className, style }) => (
+  <svg
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="1.8"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    className={className}
+    style={style}
+  >
+    <path d="M12 2L19 9L12 16L5 9L12 2Z" />
+    <path d="M12 7L15 10L12 13L9 10L12 7Z" fill="currentColor" fillOpacity="0.4" />
+    <path d="M4 19C7.5 17.5 16.5 17.5 20 19" />
+    <path d="M7 22C9.5 21 14.5 21 17 22" />
+  </svg>
+);
 
 const SKILL_CATEGORIES = [
   {
@@ -30,14 +50,13 @@ const SKILL_CATEGORIES = [
     ]
   },
   {
-    id: "tools",
-    title: "Developer Tools",
-    icon: FiTool,
+    id: "languages",
+    title: "Languages",
+    icon: FiGlobe,
     skills: [
-      { name: "Git", Icon: SiGit, color: "#F05032" },
-      { name: "GitHub", Icon: SiGithub, color: "#FFFFFF" },
-      { name: "Postman", Icon: SiPostman, color: "#FF6C37" },
-      { name: "Figma", Icon: SiFigma, color: "#F24E1E" }
+      { name: "C++", Icon: SiCplusplus, color: "#00599C" },
+      { name: "Python", Icon: SiPython, color: "#3776AB" },
+      { name: "JavaScript", Icon: SiJavascript, color: "#F7DF1E" }
     ]
   },
   {
@@ -50,13 +69,26 @@ const SKILL_CATEGORIES = [
     ]
   },
   {
-    id: "languages",
-    title: "Languages",
-    icon: FiGlobe,
+    id: "ai",
+    title: "AI Tools",
+    icon: RiSparklingFill,
     skills: [
-      { name: "C++", Icon: SiCplusplus, color: "#00599C" },
-      { name: "Python", Icon: SiPython, color: "#3776AB" },
-      { name: "JavaScript", Icon: SiJavascript, color: "#F7DF1E" }
+      { name: "Antigravity", Icon: AntigravityIcon, color: "#8AB4F8" },
+      { name: "Codex", Icon: RiOpenaiFill, color: "#10A37F" },
+      { name: "Claude", Icon: SiClaude, color: "#D97706" },
+      { name: "GitHub Copilot", Icon: SiGithubcopilot, color: "#FFFFFF" },
+      { name: "Google Gemini", Icon: SiGooglegemini, color: "#4E8BF5" }
+    ]
+  },
+  {
+    id: "tools",
+    title: "Developer Tools",
+    icon: FiTool,
+    skills: [
+      { name: "Git", Icon: SiGit, color: "#F05032" },
+      { name: "GitHub", Icon: SiGithub, color: "#FFFFFF" },
+      { name: "Postman", Icon: SiPostman, color: "#FF6C37" },
+      { name: "Figma", Icon: SiFigma, color: "#F24E1E" }
     ]
   },
   {
