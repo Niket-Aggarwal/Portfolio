@@ -19,17 +19,17 @@ const EXPERIENCE_DATA = [
     category: "Higher Education",
     description:
       "currently pursuing Bachelor of Science (Honours) in Computer Science, building strong foundation in programming, algorithms, and software development",
-    highlights: ["Data Structures", "Problem Solving", "Web Development"],
+    highlights: ["Data Structures", "Problem Solving", "Web Development", "Data Science"],
     side: "right",
   },
   {
     id: 3,
-    period: "2025 — Present",
-    role: "Society Member & Event Contributor",
+    period: "2025 - Present",
+    role: "TEDxSSCBS (Oraginizing Crew)",
     category: "Community",
     description:
-      "contributing as an active member of a college society by supporting the organization of student hackathons, campus events and TEDxSSCBS. Collaborating with teams to manage event activities and engage with the student community",
-    highlights: ["Event Coordination", "Team Collaboration", "Community Engagement"],
+      "actively contributing to TEDxSSCBS by supporting event planning, coordination and execution. Involved in sponsorship outreach to collaborating with teams to manage event operations and deliver impactful experiences",
+    highlights: ["Corporate Partnerships", "Event Management","Team Collaboration"],
     side: "left",
   },
   {
@@ -38,7 +38,7 @@ const EXPERIENCE_DATA = [
     role: "Freelance Developer",
     category: "Current Focus",
     description:
-      "building web applications using React, Node.js, Express, and MongoDB. Focused on clean architecture, responsive designs, and scalable backend services.",
+      "building web applications using React, Node.js, Express, and MongoDB focused on clean architecture, responsive designs, and scalable backend services",
     highlights: ["MERN Stack", "REST APIs", "Tailwind CSS"],
     side: "right",
   },
