@@ -25,7 +25,7 @@ const EXPERIENCE_DATA = [
   {
     id: 3,
     period: "2025 - Present",
-    role: "TEDxSSCBS (Oraginizing Crew)",
+    role: "TEDxSSCBS (Organizing Crew)",
     category: "Community",
     description:
       "actively contributing to TEDxSSCBS by supporting event planning, coordination and execution. Involved in sponsorship outreach to collaborating with teams to manage event operations and deliver impactful experiences",
