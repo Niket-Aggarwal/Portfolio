@@ -1,15 +1,16 @@
 # Robots.txt for Niket Aggarwal Portfolio
-# https://www.niket.live
+# Canonical domain: https://www.niket.live
 
 User-agent: *
 Allow: /
-Disallow: /assets/
-Disallow: /*.js$
-Disallow: /*.css$
 
-# Canonical Host
-Host: https://www.niket.live
+# Block build artifacts & internal assets only
+Disallow: /assets/*.js
+Disallow: /assets/*.css
+Disallow: /assets/*.map
 
-# Sitemap Locations
+# Sitemap
 Sitemap: https://www.niket.live/sitemap.xml
-Sitemap: https://www.niket.live/sitemap.txt
+
+# Preferred host
+Host: https://www.niket.live
