@@ -16,7 +16,7 @@ const EXPERIENCE_DATA = [
     id: 2,
     period: "2025-present",
     role: "Bachelor of Science (Honours) in Computer Science",
-    category: "Higher Education",
+    category: "Under Graduation",
     description:
       "currently pursuing Bachelor of Science (Honours) in Computer Science, building strong foundation in programming, algorithms, and software development",
     highlights: ["Data Structures", "Problem Solving", "Web Development", "Data Science"],
@@ -29,7 +29,7 @@ const EXPERIENCE_DATA = [
     category: "Community",
     description:
       "actively contributing to TEDxSSCBS by supporting event planning, coordination and execution. Involved in sponsorship outreach to collaborating with teams to manage event operations and deliver impactful experiences",
-    highlights: ["Corporate Partnerships", "Event Management","Team Collaboration"],
+    highlights: ["Corporate Partnerships", "Event Management", "Team Collaboration"],
     side: "left",
   },
   {
