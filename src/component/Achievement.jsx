@@ -9,7 +9,7 @@ const ACHIEVEMENTS_DATA = [
     id: 1,
     role: "Campus Mantri",
     organization: "GeeksforGeeks",
-    period: "June 2026 - Present",
+    period: "June 2026 - November 2026",
     image: CMID,
     certificate: null,
     hasCertificate: false,
